@@ -1,0 +1,57 @@
+.container
+{
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0.625rem 0;
+    
+}
+.flex
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+   
+}
+.btn
+{
+    color: white;
+    padding: 0.8rem 1.8rem;
+    background: rgba(238, 90, 36,1.0);
+    font-size: 1.2rem;
+    border-radius: 3px;
+}
+.btn:hover{
+    transform: scale(0.98);
+    cursor: pointer;
+}
+.img-placeholder
+{
+    width: 200px;
+}
+
+.center-container
+{
+    width: 75%;
+    max-width: 100%;
+    margin: 0 auto;
+   
+    padding: 0 0.625rem;
+    
+}
+.grid-container
+{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    height: 550px;  
+}
+.message
+{
+    border: 1px solid var(--danger-btn);
+    padding: 0.4rem 0.4rem;
+    color:var(--danger-btn);
+    margin-top: 0;
+    border-radius: 4px;
+    background-color:rgba(232, 65, 24,0.2);
+
+}
