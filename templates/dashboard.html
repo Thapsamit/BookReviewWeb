@@ -1,0 +1,36 @@
+{% extends 'layout.html' %} 
+{% include 'includes/_dashboardnavbar.html' %}
+
+{% block body %}
+
+{% if message %}
+  <div class="message-container">
+      <div class="container flex">
+          <p class="message-success">
+              {{ message|safe }}
+          </p>
+      </div>
+  </div>
+{% endif %}
+
+<div class="search-container">
+    <div class="container flex">
+        <h1 class="search-title">
+            Search a Book
+        </h1>
+        <div class="search-box">
+            <form action="{{ url_for('search') }}">
+               <input type="text" id="search-by" placeholder="search by ISBN">
+                <select name="" id="search-book">
+                    <option value="ISBN">ISBN</option>
+                    <option value="Title">TITLE</option>
+                    <option value="Author">AUTHOR</option>
+                </select>
+                <button type="submit">Search <i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+</div>
+{% include 'includes/_footer.html' %}
+ 
+{% endblock %}

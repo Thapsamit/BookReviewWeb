@@ -1,0 +1,104 @@
+{% extends 'layout.html' %} 
+{% include 'includes/_dashboardnavbar.html' %}
+
+{% block body %}
+
+
+<section class="books-section">
+    {% if message %}
+    <div class="message-container">
+        <div class="container flex">
+            <p class="message-success">
+                {{message|safe}}
+            </p>
+        </div>
+    </div>
+    {% endif %}
+    <div class="container">
+        <div class="grid-books">
+            <div class="books-details">
+                <img src="http://covers.openlibrary.org/b/ISBN/1416949658-M.jpg" alt="Card image cap" >
+                <div class="basic-details">
+                        <h4 class="title">Title</h4>
+                        <p>The dark is rising</p>
+                        <h4 class="title">Author</h4>
+                        <p>Susane</p>
+                        <h4 class="title">Year</h4>
+                        <p>1900</p>
+                        <h4 class="title">ISBN</h4>
+                        <p>461694648</p>
+                        <h4 class="title">Ratings</h4>
+                        <div class="ratings">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <small>(4/5)</small>
+                        </div>
+                </div>
+            </div>
+            <div class="review-box">
+                <div class="reviews-bx">
+                    <h3 class="title">
+                        Add Your Reviews and ratings
+                    </h3>
+                    <form action="">
+                       <div class="ratings">
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <i class="fas fa-star"></i>
+                         <small>(0/5)</small>
+                       </div>
+                        <textarea name="" id=""  placeholder="Enter your Review...."></textarea>
+                        <input type="submit" class="btn btn-save">
+                        <a href="" class="btn btn-edit" style="background-color: #f7b731;">Edit <i class="fas fa-pencil-alt"></i></a>
+                        <a href="" class="btn btn-clear">Clear</a>
+                        <a href="" class="btn btn-edit">Delete <i class="fas fa-trash"></i></a>
+                    </form>
+                </div>
+            </div>
+            <div class="review-section">
+    
+                    <h3 class="title">All Reviews(4)</h3>
+                 <div class="review-section-box">
+                     <i class="fas fa-user-circle"></i>
+                     <div class="user-comments">
+                        <h4 class="name-of-user">Amit thapliyal</h4>
+                        <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sequi perferendis esse excepturi ipsum provident facere odio, natus cumque tempore eligendi quod dolore optio dolorem iste? Delectus non voluptatibus est?</p>
+                        <div class="ratings">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><small>(0/5)</small>
+                        </div>
+                     </div>
+                 </div>
+                 <div class="review-section-box">
+                     <i class="fas fa-user-circle"></i>
+                     <div class="user-comments">
+                        <h4 class="name-of-user">Amit thapliyal</h4>
+                        <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sequi perferendis esse excepturi ipsum provident facere odio, natus cumque tempore eligendi quod dolore optio dolorem iste? Delectus non voluptatibus est?</p>
+                        <div class="ratings">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><small>(0/5)</small>
+                        </div>
+                     </div>
+                     
+                 </div>
+                 <div class="review-section-box">
+                    <i class="fas fa-user-circle"></i>
+                    <div class="user-comments">
+                       <h4 class="name-of-user">Amit thapliyal</h4>
+                       <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sequi perferendis esse excepturi ipsum provident facere odio, natus cumque tempore eligendi quod dolore optio dolorem iste? Delectus non voluptatibus est?</p>
+                       <div class="ratings">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><small>(0/5)</small>
+                       </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+{% include 'includes/_footer.html' %}
+{% endblock %}

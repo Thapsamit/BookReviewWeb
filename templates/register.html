@@ -13,11 +13,13 @@
                     <img src="/static/img/logo-dark.png" alt="logo">
                 </div> 
                 <div class="form-content">
+                    {% if message %}
                     <p class="message">
-                        message
+                        {{message | safe}}
                     </p>
+                    {% endif %}
                     <h2>Register With us </h2>
-                    <form action="#" method="post">
+                    <form action="/register_user" method="post">
                         <div class="form-grp">
                             <input type="text" placeholder="Enter Name" required>
                         </div>

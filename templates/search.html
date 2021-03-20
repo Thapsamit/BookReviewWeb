@@ -1,0 +1,36 @@
+{% extends 'layout.html' %} 
+{% include 'includes/_dashboardnavbar.html' %}
+
+{% block body %}
+
+<section class="search-results">
+    
+    <div class="container flex">
+        <h1 class="search-title">
+            Search Results
+        </h1>
+        <div class="search-table">
+            <table class="table-body">
+                <tr>
+                    <th>Sr no</th>
+                    <th>Title of Book</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th>Go To</th>
+                </tr>
+                <tr>
+                     <td>1</td>
+                     <td>The Dark is rising</td>
+                     <td>Paul</td>
+                     <td>34287563298</td>
+                     <td><a href="{{ url_for('info', isbn=451) }}" class="btn">Read reviews &nbsp&nbsp<i class="fas fa-chevron-right"></i></a></td>
+                </tr> 
+            </table>
+        </div>
+    </div>
+
+
+</section>
+{% include 'includes/_footer.html' %}
+
+{% endblock %}
